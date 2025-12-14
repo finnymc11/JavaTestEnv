@@ -1,3 +1,5 @@
+//BASIC JS
+
 //variables
 let username = 'Finbar'; //string literal
 let age = 22; //number literal
@@ -48,3 +50,40 @@ function square(num) {
 }
 
 console.log(square(4));
+
+
+//OBJECT ORIENTED PROGRAMMING for JS
+
+//Object literal
+const circle = {
+    radius: 1,
+    location: {
+        x:1,
+        y:1
+    },
+    draw: function() {
+        console.log('draw');
+    }
+};
+
+circle.draw();
+
+//Factory function
+function createCircle(radius){
+    return {
+        radius,
+        draw: function(){
+            console.log('draw');
+        }
+    };
+};
+const circle2 = createCircle(1);
+
+//Constructor function
+function Circle(radius){
+    this.radius = radius;
+    this.draw = () => {
+        console.log('draw');
+    }
+}
+const another = new Circle(1);
